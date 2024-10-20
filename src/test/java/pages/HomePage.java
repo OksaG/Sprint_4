@@ -40,10 +40,12 @@ public class HomePage {
     }
 
     public String getAnswer(int accordionIdNumber) {
+        new WebDriverWait(driver, Duration.ofSeconds(3))
+                .until(ExpectedConditions.visibilityOf(driver.findElement(By.id("accordion__heading-" + (accordionIdNumber)))));
         //кликаем в вопрос
         driver.findElement(By.id("accordion__heading-" + (accordionIdNumber))).click();
         new WebDriverWait(driver, Duration.ofSeconds(3))
-                .until(ExpectedConditions.visibilityOf(driver.findElement(By.id("accordion__heading-" + (accordionIdNumber)))));
+                .until(ExpectedConditions.visibilityOf(driver.findElement(By.id("accordion__panel-" + (accordionIdNumber)))));
         return driver.findElement(By.id("accordion__panel-" + (accordionIdNumber))).getText();
     }
 
