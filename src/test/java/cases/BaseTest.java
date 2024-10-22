@@ -17,7 +17,7 @@ public class BaseTest {
         driver.get(SITE_URL);
     }
 
-    public void cookiesAссept() {
+    public void cookiesAccept() {
         driver.findElement(By.xpath(".//button[contains(@class, 'App_CookieButton')]")).click();
     }
 

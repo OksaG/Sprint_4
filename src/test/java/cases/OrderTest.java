@@ -20,7 +20,6 @@ public class OrderTest extends BaseTest {
     private final String rentPeriod;
     private final String colorOfScooter;
     private final String comment;
-    private final String expectedSuccessText = "Заказ оформлен";
 
     public OrderTest(String name, String lastName, String address, String subwayStation,
                      String phoneNumber, String date, String rentPeriod, String colorOfScooter, String comment) {
@@ -47,7 +46,7 @@ public class OrderTest extends BaseTest {
     public void createOrderWithButtonInHeader() {
 
         goToWebsite();
-        cookiesAссept();
+        cookiesAccept();
         HomePage homePage = new HomePage(driver);
         homePage.createOrderButtonInHeader();
         OrderPage orderPage = new OrderPage(driver);
@@ -66,7 +65,7 @@ public class OrderTest extends BaseTest {
     public void createOrderWithButtonInFooter() {
 
         goToWebsite();
-        cookiesAссept();
+        cookiesAccept();
         HomePage homePage = new HomePage(driver);
         homePage.createOrderButtonInFooter();
         OrderPage orderPage = new OrderPage(driver);

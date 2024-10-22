@@ -36,7 +36,7 @@ public class QuestionsTest extends BaseTest {
     @Test
     public void questionsTest() {
         goToWebsite();
-        cookiesAссept();
+        cookiesAccept();
         HomePage homePage = new HomePage(driver);
         //доскроллить до "Вопросы о важном"
         homePage.scrollAccordion();
